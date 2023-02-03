@@ -1,62 +1,16 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
-	<title>RUOK Store</title>
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-	
-    <!-- Jquery -->
-	<script src="lib/Jquery/Jquery.min.js"></script>
-
-	<!-- owl carousel libraries -->
-	<link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="lib/owlcarousel/owl.theme.default.min.css">
-	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-	<!-- Sweet Alert -->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-
-	<!-- Slider -->
-	<link rel="stylesheet" href="lib/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
-	<link rel="stylesheet" href="lib/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
-	<script src="lib/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
-
-	<!-- css -->
-	
-
-	<!-- js -->
-
-    
-	<?php require_once "php/echoHTML.php"; ?>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BuyLAP - Trang chủ</title>
+     <link rel="stylesheet" href="../CSS/Stype.css">
+     <script src="https://kit.fontawesome.com/c7202ffe49.js" crossorigin="anonymous"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i" rel="stylesheet">
+     <link rel="shortcut icon" href="../Foods/Logo-footer.png" type="image/vnd.microsoft.icon">
 </head>
-
-<body>
-	<?php addTopNav(); ?>
-
-	<section>
-		<?php 
-			addHeader(); 
-			addHome();
-		?>
-	</section>
-
-	<?php
-		addContainTaiKhoan();
-		addPlc();
-	?>
-
-	<div class="footer">
-		<?php addFooter(); ?>
-	</div>
-
-	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
-	<i class="fa fa-arrow-down" id="goto-bot-page" onclick="gotoBot()"></i>
-
-</body>
-
-</html>
