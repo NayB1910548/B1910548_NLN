@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <title>RUOK-Store</title>
      <link rel="stylesheet" href="">
-     <link rel="shortcut icon" href="pages/Foods/logo-ruok.svg" type="image/vnd.microsoft.icon">
+     <link rel="shortcut icon" href="pages/Foods/logo-ruok.svg">
 
 
 </head>
