@@ -20,7 +20,7 @@ function addTopNav()
                 <li><a href=""><i class="fa fa-handshake-o"></i> Tuyển dụng</a></li>
                 <li><a href=""><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
                 <li><a href=""><i class="fa fa-wrench"></i> Bảo hành</a></li>
-                <li><a href=""><i class="fa fa-phone"></i> Liên hệ</a></li>
+                <li><a href=""><i class="fa fa-phone"></i> Đổi trả hàng</a></li>
             </ul> <!-- End Quick link -->
         </section><!-- End Section -->
     </div><!-- End Top Nav  -->';
@@ -125,8 +125,9 @@ function addHome()
                 <div class="dropdown-content"></div>
             </div>            
         </div>
-
-    </div> <!-- End khung chọn bộ lọc -->
+        
+        
+     <!-- End khung chọn bộ lọc -->
 
     <div class="choosedFilter flexContain"></div> <!-- Những bộ lọc đã chọn -->
     <hr>
@@ -361,7 +362,7 @@ function addPlc()
                 <li>Lỗi đổi tại nhà trong 1 ngày</li>
                 <li>Hỗ trợ suốt thời gian sử dụng.
                     <br>Hotline:
-                    <a href="tel:12345678" style="color: #288ad6;">1234.5678</a>
+                    <a href="tel:0123456789" style="color: #288ad6;">0123 456 789</a>
                 </li>
             </ul>
         </section>

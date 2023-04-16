@@ -117,7 +117,7 @@ function getCurrentUser(onSuccess, onFail) {
         type: "POST",
         url: "php/xulytaikhoan.php",
         dataType: "json",
-        timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
+        //timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
             request: "getCurrentUser"
         },
@@ -150,7 +150,7 @@ function checkTaiKhoan() {
     })
 }
 
-//  ================================ WEB 2 =================================
+//  ================================ WEB =================================
 function checkDangKy() {
     var ho = document.getElementById('ho').value;
     var ten = document.getElementById('ten').value;
@@ -162,7 +162,7 @@ function checkDangKy() {
 
     $.ajax({
         url: "php/xulytaikhoan.php",
-        type: "post",
+        type: "POST",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -193,7 +193,7 @@ function checkDangKy() {
             Swal.fire({
                 type: "error",
                 title: "Lỗi",
-                // html: e.responseText
+                html: e.responseText
             });
             console.log(e.responseText)
         }
@@ -208,7 +208,7 @@ function checkDangNhap() {
 
     $.ajax({
         url: "php/xulytaikhoan.php",
-        type: "post",
+        type: "POST",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -240,7 +240,7 @@ function checkDangNhap() {
             Swal.fire({
                 type: "error",
                 title: "Lỗi khi đăng nhập",
-                // html: e.responseText
+                html: e.responseText
             });
             console.log(e.responseText)
         }
@@ -313,7 +313,7 @@ function capNhatThongTinUser() {
     })
 }
 
-function promoToWeb(name, value) { // khuyen mai
+function promoToweb(name, value) { // khuyen mai
     if (!name || name == "Nothing") return "";
     var contentLabel = "";
     switch (name) {
@@ -342,7 +342,7 @@ function promoToWeb(name, value) { // khuyen mai
     return label;
 }
 
-//  ================================ END WEB 2 =================================
+//  ================================ END WEB =================================
 
 // Tạo event, hiệu ứng cho form tài khoản
 function setupEventTaiKhoan() {

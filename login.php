@@ -31,7 +31,7 @@ function kiemTraDangNhap(){
         }
     $.ajax({
         url:"php/xulidangnhapadmin.php",
-        type:"post",
+        type:"POST",
         data: {
             data_username:a,
             data_password:b
@@ -70,7 +70,7 @@ function kiemTraDangNhap(){
                             <input name="username" id="username" type="text" class="form-control" placeholder="Tên đăng nhập" required="">
                         </div>
                         <div class="form-group">
-                            <input name="password" id="password" type="password" class="form-control" placeholder="*****" required="">
+                            <input name="password" id="password" type="password" class="form-control" placeholder="Mật khẩu" required="">
                         </div>
                         <button type="button" class="form-button button-l margin-b" onclick="kiemTraDangNhap()">Sign In</button>
 
@@ -80,7 +80,7 @@ function kiemTraDangNhap(){
                         <!-- <a class="text-darkyellow" href="#"><small>Forgot your password?</small></a> -->
                         <!-- <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p> -->
                     </form>
-                    <!-- <p class="margin-t text-whitesmoke"><small> Your Name &copy; 2019</small> </p> -->
+                    <!-- <p class="margin-t text-whitesmoke"><small> Your Name &copy; 2023</small> </p> -->
                 </div>
             </div>  
             </body>

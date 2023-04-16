@@ -8,13 +8,13 @@ window.onload = function() {
     khoiTao();
 
     // autocomplete cho khung tim kiem
-    // autocomplete(document.getElementById('search-box'), list_products);
+    //autocomplete(document.getElementById('search-box'), list_products);
 
     // thêm tags (từ khóa) vào khung tìm kiếm
     var tags = ["Samsung", "iPhone", "Xiaomi", "Oppo", "Huawei"];
     for (var t of tags) addTags(t, "index.php?search=" + t);
 
-    // =================== web 2 tìm nâng cao ================
+    // ===================  tìm nâng cao ================
     // Thêm hình vào banner
     setupBanner();
 
@@ -83,7 +83,7 @@ window.onload = function() {
     addSortFilter('des', 'TenSP', 'Tên Z-A');
 };
 
-// ============================== web2 ===========================
+// ============================== web ===========================
 function hienThiKhungSanPhamMacDinh() {
 
     $('.contain-khungSanPham').html('');
@@ -229,7 +229,7 @@ function addProductsFromList(list, filters) {
 
     } else {
         for (var p of list) {
-            addToWeb(p);
+            addToweb(p);
         }
     }
 
@@ -253,7 +253,7 @@ function chuyenTrang(vitriTrang) {
     var temp = copyObject(DanhSachSanPham);
     temp = temp.splice(start, ProductsPerPage);
     for (var p of temp) {
-        addToWeb(p);
+        addToweb(p);
     }
 }
 
@@ -306,7 +306,7 @@ function ajaxThemSanPham(p, onSuccess, onFail) {
         dataType: "json",
         timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
-            request: "addFromWeb1",
+            request: "addFromweb1",
             sanpham: p
         },
         success: function(data, status, xhr) {
@@ -329,7 +329,7 @@ function ajaxThemSanPham(p, onSuccess, onFail) {
     })
 }
 
-function addToWeb(p, ele, returnString) {
+function addToweb(p, ele, returnString) {
     // Chuyển star sang dạng tag html
     var rating = "";
     if (p.SoDanhGia >= 0) {
@@ -352,12 +352,12 @@ function addToWeb(p, ele, returnString) {
 
     if (p.KM.LoaiKM == "GiaReOnline") {
 
-        khuyenmaidiv = promoToWeb(p.KM.LoaiKM, giaTriSauKM);
+        khuyenmaidiv = promoToweb(p.KM.LoaiKM, giaTriSauKM);
         pricediv = `<strong>` + giaTriSauKM.toLocaleString() + `&#8363;</strong>
                 <span>` + giaTri.toLocaleString() + `&#8363;</span>`;
     } else {
 
-        khuyenmaidiv = promoToWeb(p.KM.LoaiKM, giaTrikhuyenMai);
+        khuyenmaidiv = promoToweb(p.KM.LoaiKM, giaTrikhuyenMai);
         pricediv = `<strong>` + giaTri.toLocaleString() + `&#8363;</strong>`;
     }
 
@@ -377,7 +377,7 @@ function addToWeb(p, ele, returnString) {
             <div class="ratingresult">
                 ` + rating + `
             </div>
-            ` + (promoToWeb(p.KM.LoaiKM, giaTrikhuyenMai)) + `
+            ` + (promoToweb(p.KM.LoaiKM, giaTrikhuyenMai)) + `
             <div class="tooltip">
                 <button class="themvaogio" onclick="return themVaoGioHang('` + p.MaSP + `', '` + p.TenSP + `');">
                     <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ</span>
@@ -437,7 +437,7 @@ function addKhungSanPham(tenKhung, color, filters, len) {
         if (spResult.length < len) len = spResult.length;
 
         for (var i = 0; i < len; i++) {
-            s1 += addToWeb(spResult[i], null, true);
+            s1 += addToweb(spResult[i], null, true);
             // truyền vào 'true' để trả về chuỗi rồi gán vào s
         }
 

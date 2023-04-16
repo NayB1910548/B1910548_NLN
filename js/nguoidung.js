@@ -182,7 +182,7 @@ function changePass() {
         inps[0].value = inps[1].value = inps[2].value = "";
         openChangePass();    
     });
-    // addAlertBox('Thay đổi mật khẩu thành công.', '#5f5', '#000', 4000);
+    addAlertBox('Thay đổi mật khẩu thành công.', '#5f5', '#000', 4000);
 }
 
 function changeInfo(iTag, info) {

@@ -6,14 +6,14 @@ window.onload = function() {
     khoiTao();
 
     // thêm tags (từ khóa) vào khung tìm kiếm
-    var tags = ["Samsung", "iPhone", "Xiaomi", "Oppo", "Huawei"];
+    var tags = ["Samsung", "iPhone", "Huawei", "Oppo", "Mobi"];
     for (var t of tags) addTags(t, "index.php?search=" + t, true);
 
-    phanTichURL_Web2();
+    phanTichURL_web();
 }
 
-// ======================= Web 2 =======================
-function phanTichURL_Web2() {
+// ======================= web =======================
+function phanTichURL_web() {
     maProduct = window.location.href.split('?')[1]; // lấy tên
     if (!maProduct) return; // nếu không tìm thấy tên thì thoát hàm
 
@@ -34,7 +34,7 @@ function phanTichURL_Web2() {
         error: function(e) {
             Swal.fire({
                 type: "error",
-                title: "Lỗi lấy sản phẩm (chitietSanpham.js > phanTichURL_Web2)",
+                title: "Lỗi lấy sản phẩm (chitietSanpham.js > phanTichURL_web)",
                 html: e.responseText
             });
         }
@@ -239,10 +239,10 @@ function getDetailPromo(sp) {
         case 'giareonline':
             var del = Number(p.DonGia) - Number(p.KM.GiaTriKM);
             var span = `<span style="font-weight: bold">` + numToString(del) + `</span>`;
-            return `Sản phẩm sẽ được giảm ` + span + `₫ khi mua hàng online bằng thẻ VPBank hoặc tin nhắn SMS`;
+            return `Sản phẩm sẽ được giảm ` + span + `₫ khi mua hàng online bằng thẻ Sacumbank`;
 
         default:
-            var span = `<span style="font-weight: bold">61 xe Wave Alpha</span>`;
+            var span = `<span style="font-weight: bold">1 chỉ vàng 9999</span>`;
             return `Cơ hội trúng ` + span + ` khi trả góp Home Credit`;
     }
 }
