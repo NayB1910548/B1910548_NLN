@@ -313,7 +313,7 @@ function capNhatThongTinUser() {
     })
 }
 
-function promoToweb(name, value) { // khuyen mai
+function promoToWeb(name, value) { // khuyen mai
     if (!name || name == "Nothing") return "";
     var contentLabel = "";
     switch (name) {
@@ -708,68 +708,3 @@ function getThongTinSanPhamFrom_TheGioiDiDong() {
         document.body.appendChild(s);
     })();
 }
-
-// $('.taikhoan').find('input').on('keyup blur focus', function (e) {
-
-//     var $this = $(this),
-//         label = $this.prev('label');
-
-//     if (e.type === 'keyup') {
-//         if ($this.val() === '') {
-//             label.removeClass('active highlight');
-//         } else {
-//             label.addClass('active highlight');
-//         }
-//     } else if (e.type === 'blur') {
-//         if ($this.val() === '') {
-//             label.removeClass('active highlight');
-//         } else {
-//             label.removeClass('highlight');
-//         }
-//     } else if (e.type === 'focus') {
-
-//         if ($this.val() === '') {
-//             label.removeClass('highlight');
-//         } else if ($this.val() !== '') {
-//             label.addClass('highlight');
-//         }
-//     }
-
-// });
-
-// $('.tab a').on('click', function (e) {
-
-//     e.preventDefault();
-
-//     $(this).parent().addClass('active');
-//     $(this).parent().siblings().removeClass('active');
-
-//     target = $(this).attr('href');
-
-//     $('.tab-content > div').not(target).hide();
-
-//     $(target).fadeIn(600);
-
-// });
-
-// for(var p of list_products) {
-//     switch(p.promo.name) {
-//         case 'tragop':
-//             p.MaKM = 4;
-//         break;
-
-//         case 'giareonline':
-//             p.MaKM = 3;
-//         break;
-
-//         case 'giamgia':
-//             p.MaKM = 2;
-//         break;
-
-//         case 'moiramat':
-//             p.MaKM = 5;
-//         break;
-
-//         default: p.MaKM = 1;
-//     }  
-// }

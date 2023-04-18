@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Admin - RUOK-STORE</title>
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon1.ico" />
 
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
@@ -287,12 +287,12 @@
                 require_once('BackEnd/ConnectionDB/DB_classes.php');
 
                 $hd = new HoaDonBUS();
-                $a = 1;
+                $i = 1;
                 echo "<table class='table-outline hideImg'>";
 
                 foreach ($hd->select_all() as $rowname => $row) {
                     echo "<tr>
-                    <td  style='width: 5%'>" . $a++ . "</td>
+                    <td  style='width: 5%'>" . $i++ . "</td>
                     <td  style='width: 5%'>" . $row['MaHD'] . "</td>
                     <td  style='width: 5%'>" . $row['MaND'] . "</td>
                     <td  style='width: 15%'>" . $row['NgayLap'] . "</td>
@@ -305,8 +305,6 @@
                 }
                 echo "</table>";
             ?>
-            </div>
-            <div class="table-content">
             </div>
 
             <div class="table-footer">

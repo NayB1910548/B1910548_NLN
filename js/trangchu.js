@@ -306,7 +306,7 @@ function ajaxThemSanPham(p, onSuccess, onFail) {
         dataType: "json",
         timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
-            request: "addFromweb1",
+            request: "addFromweb",
             sanpham: p
         },
         success: function(data, status, xhr) {
@@ -352,12 +352,12 @@ function addToweb(p, ele, returnString) {
 
     if (p.KM.LoaiKM == "GiaReOnline") {
 
-        khuyenmaidiv = promoToweb(p.KM.LoaiKM, giaTriSauKM);
+        khuyenmaidiv = promoToWeb(p.KM.LoaiKM, giaTriSauKM);
         pricediv = `<strong>` + giaTriSauKM.toLocaleString() + `&#8363;</strong>
                 <span>` + giaTri.toLocaleString() + `&#8363;</span>`;
     } else {
 
-        khuyenmaidiv = promoToweb(p.KM.LoaiKM, giaTrikhuyenMai);
+        khuyenmaidiv = promoToWeb(p.KM.LoaiKM, giaTrikhuyenMai);
         pricediv = `<strong>` + giaTri.toLocaleString() + `&#8363;</strong>`;
     }
 
@@ -377,7 +377,7 @@ function addToweb(p, ele, returnString) {
             <div class="ratingresult">
                 ` + rating + `
             </div>
-            ` + (promoToweb(p.KM.LoaiKM, giaTrikhuyenMai)) + `
+            ` + (promoToWeb(p.KM.LoaiKM, giaTrikhuyenMai)) + `
             <div class="tooltip">
                 <button class="themvaogio" onclick="return themVaoGioHang('` + p.MaSP + `', '` + p.TenSP + `');">
                     <span class="tooltiptext" style="font-size: 15px;">Thêm vào giỏ</span>
